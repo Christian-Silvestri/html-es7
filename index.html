@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>HTML-Esercizio 7</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+
+<body>
+    <form action="server.php" method="post">
+        <h1>SOTTOSCRIZIONE ABBONAMENTO</h1>
+        <section>
+            <h2>Dati del cliente</h2>
+            <div>
+                <label for="name"><span>NOME</span></label>
+                <input type="text" id="name" name="user_name" autofocus/>
+            </div>
+            <div>
+                <label for="surname"><span>COGNOME</span></label>
+                <input type="text" id="surname" name="user_surname"/>
+            </div>
+            <div>
+                <label for="birth"><span>DATA DI NASCITA</span></label>
+                <input type="date" id="birth" name="user_birth" min="2004-03-29"/> 
+            </div>
+            <div>
+                <label for="mail"><span>E-MAIL</span></label>
+                <input type="email" id="mail" name="user_email"/> 
+            </div>
+            <div>
+                <label for="password"><span>PASSWORD</span></label>
+                <input type="password" id="password" name="user_pass"/>
+            </div>
+            <div>
+                <label for="phone"><span>TELEFONO</span></label>
+                <input type="text" id="phone" name="user_phone">
+            </div>
+            <div>
+                <label for="plan"><span>ABBONAMENTO</span></label>
+                <select id="plan" name="plan">
+                    <option value="free">FREE</option>
+                    <optgroup label="Vip members only">
+                        <option value="premium">PREMIUM (€5.00)</option>
+                        <option value="gold">GOLD (€10.00)</option>
+                        <option value="platinum">PLATINUM (€15.00)</option>
+                    </optgroup>
+                </select>
+                <label for="pro">Piano PRO</label>
+                <input id="pro" name="pro" type="checkbox"/>
+            </div>
+        </section>
+        <section>
+            <fieldset style="width:20em">
+                <legend>PAGAMENTO E FATTURAZIONE</legend>
+                <div>
+                    <span>DATI CARTA DI CREDITO</span>
+                    <label for="card">NUM
+                        <input type="text" id="card" name="card1" size="2" maxlength="4"/>
+                        <input type="text" id="card" name="card2" size="2" maxlength="4"/>
+                        <input type="text" id="card" name="card3" size="2" maxlength="4"/>
+                        <input type="text" id="card" name="card4" size="2" maxlenght="4"/>
+                    </label><br>
+                    <label for="cvc">CVC
+                        <input type="text" id="cvc" name="cvc" size="2" maxlenght="3"/>
+                    </label><br>
+                    <label for="exp">EXP
+                        <input type="text" id="exp" name="expm" size="2" maxlength="2" placeholder="mm" /> / 
+                        <input type="text" id="exp" name="expy" size="2" maxlength="2" placeholder="aa"/>
+                    </label><br>
+                </div>
+                 <div>
+                    <label for="address"><span>INDIRIZZO FATTURAZIONE</span></label>
+                    <textarea name="address" cols="40" rows="3" placeholder="via/vicolo/piazza marco rossi, 5"></textarea>
+                </div>
+             </fieldset>
+        </section>
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
