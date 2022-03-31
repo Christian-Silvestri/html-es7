@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <form action="server.php" method="post">
+    <form action="#" method="get|post">
         <h1>SOTTOSCRIZIONE ABBONAMENTO</h1>
         <section>
             <h2>Dati del cliente</h2>
@@ -51,9 +51,16 @@
                         <option value="gold">GOLD (€10.00)</option>
                         <option value="platinum">PLATINUM (€15.00)</option>
                     </optgroup>
-                </select>
-                <label for="pro">Piano PRO</label>
-                <input id="pro" name="pro" type="checkbox"/>
+                </select><br><br>
+                <button onclick="myfunction()">PIANO PRO</button>
+                <script>
+                    function myfunction()
+                    {
+                        var x=document.getElementById("pro");
+                        x.checked=true;
+                    }
+                </script>
+                <input id="pro" type="checkbox"/><br><br>
             </div>
         </section>
         <section>
